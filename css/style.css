@@ -1,0 +1,138 @@
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+
+.tree {
+    color:#666666;
+    padding-left: 60px; 
+}
+.tree li { 
+    padding: 10px 0px 10px 30px; 
+    position: relative; 
+    line-height: 24px;
+}
+.tree li>a { 
+    color:#666666; 
+    text-decoration: none; 
+    line-height: 20px; 
+    display: inline-block;
+}
+.tree li label{ 
+    margin-left: 9px; 
+    margin-bottom:0;
+}
+.tree li input{
+    display: none;
+}
+.tree input[type="checkbox"] + i { 
+    display: inline-block; 
+    width: 12px; 
+    height: 12px; 
+    line-height: 12px; 
+    text-align: center;  
+    background: url(../img/check2.png) no-repeat center;
+    background-size: 12px 12px; 
+    position: relative;
+    top: 1px;
+}
+.tree input[type="checkbox"]:checked + i{
+    display: inline-block; 
+    width: 12px; 
+    height: 12px; 
+    line-height: 12px; 
+    text-align: center;   
+    background: url(../img/check1.png) no-repeat center;
+    background-size: 12px 12px; 
+}
+.tree input.soso[type="checkbox"]:checked + i{
+    display: inline-block; 
+    width: 12px; 
+    height: 12px; 
+    line-height: 12px; 
+    text-align: center;  
+    background: url(../img/check1d.png) no-repeat center; 
+    background-size: 12px 12px;
+}
+.tree li p{
+    display: inline-block; 
+    font-weight: normal; 
+    padding-left: 10px; 
+    font-size: 14px; 
+}
+
+.tree li label:before { 
+    content: ""; 
+    position: absolute; 
+    width: 18px; 
+    height: 0;
+    border-bottom: 1px solid #e4e4e4; 
+    left: 16px; 
+    top: 21px;
+}
+/* .tree>li>a:before{content: ""; width: 0; } */
+
+/**二级三级li:before**/
+.treemenu>li:before{ 
+    content:""; 
+    width: 0; 
+    height: 100%; 
+    border-right: 1px solid #e4e4e4;
+    position: absolute; 
+    left: 15px; 
+    top:0px; 
+}
+.treemenu>li:last-child:before{ 
+    height: 50%; 
+}
+
+/**一级li:before**/
+.tree>li:before{ 
+    content:""; 
+    width: 0; 
+    height: 100%; 
+    border-right: 1px dashed #e4e4e4;
+    position: absolute; 
+    left: 15px; 
+    top:22px; 
+}
+.tree>li:last-child:before{ 
+    height: 0;
+}
+
+.active { background-color: #34495E; color: white; }
+.active a { color: #fff; }
+
+/**树状菜单通用样式**/
+.treemenu .toggler {
+    cursor: pointer; 
+    display: inline-block; 
+    height: 14px; 
+    position: absolute; 
+    left: 10px; 
+}
+li.tree-empty > .toggler { 
+    color: #aaa; 
+}
+li.tree-closed > .toggler:before { 
+    content: "+"; 
+    display: inline-block;
+    border: 1px solid #dddddd; 
+    width: 12px; 
+    height: 12px; 
+    line-height: 12px; 
+    text-align: center; 
+    background: #fff; 
+    position: relative; 
+    z-index: 10; 
+}
+li.tree-opened > .toggler:before { 
+    content: "\2212"; 
+    display: inline-block;
+    border: 1px solid #dddddd; 
+    width: 12px; 
+    height: 12px; 
+    line-height: 12px; 
+    text-align: center; 
+    background: #fff; 
+    position: relative; 
+    z-index: 10;
+}
