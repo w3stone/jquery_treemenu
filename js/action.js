@@ -110,9 +110,6 @@
 		var prevLi = parentUl.parents("li:first"); 
 		//上一级菜单的input[checkbox]
 		var prevLiInput = prevLi.find("a:first").find("input[type=checkbox]");
-		//上一级菜单的label id
-		var prevLabelId = prevLiInput.parent().attr("id");
-		
 		
 		//判断是否全选中
 		if (checkedNum>0 && checkedNum==allNum){

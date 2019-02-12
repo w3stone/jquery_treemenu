@@ -10,12 +10,6 @@ ul{list-style: none;}
     position: relative; 
     line-height: 24px;
 }
-.tree li>a { 
-    color:#666666; 
-    text-decoration: none; 
-    line-height: 20px; 
-    display: inline-block;
-}
 .tree li label{ 
     margin-left: 9px; 
     margin-bottom:0;
@@ -63,7 +57,7 @@ ul{list-style: none;}
     content: ""; 
     position: absolute; 
     width: 18px; 
-    height: 0;
+    height: 1px;
     border-bottom: 1px solid #e4e4e4; 
     left: 16px; 
     top: 21px;
@@ -102,37 +96,31 @@ ul{list-style: none;}
 .active a { color: #fff; }
 
 /**树状菜单通用样式**/
-.treemenu .toggler {
-    cursor: pointer; 
+.treemenu .toggler { 
     display: inline-block; 
-    height: 14px; 
-    position: absolute; 
-    left: 10px; 
+    width: 0;
+    height: 0; 
+}
+li > .toggler:before{
+    position: relative;
+    display: block;
+    border: 1px solid #dddddd; 
+    width: 12px; 
+    height: 12px; 
+    line-height: 12px;
+    text-align: center; 
+    background: #fff; 
+    z-index: 10;
+    left: -21px;
+    top: 0px;
+    cursor: pointer;
 }
 li.tree-empty > .toggler { 
     color: #aaa; 
 }
 li.tree-closed > .toggler:before { 
     content: "+"; 
-    display: inline-block;
-    border: 1px solid #dddddd; 
-    width: 12px; 
-    height: 12px; 
-    line-height: 12px; 
-    text-align: center; 
-    background: #fff; 
-    position: relative; 
-    z-index: 10; 
 }
 li.tree-opened > .toggler:before { 
     content: "\2212"; 
-    display: inline-block;
-    border: 1px solid #dddddd; 
-    width: 12px; 
-    height: 12px; 
-    line-height: 12px; 
-    text-align: center; 
-    background: #fff; 
-    position: relative; 
-    z-index: 10;
 }
