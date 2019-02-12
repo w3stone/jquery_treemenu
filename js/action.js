@@ -8,9 +8,9 @@
         this.find(activeSel).each(function () {
             var el = $(this).parent();
             while (el.attr("class") !== c) {
-                if (el.prop("tagName") === 'UL') {
+                if (el.prop("tagName") === 'ul') {
                     el.show();
-                } else if (el.prop("tagName") === 'LI') {
+                } else if (el.prop("tagName") === 'li') {
                     el.removeClass('tree-closed');
                     el.addClass("tree-opened");
                 }
@@ -113,13 +113,13 @@
 		
 		//判断是否全选中
 		if (checkedNum>0 && checkedNum==allNum){
-			prevLiInput.prop("checked",true);
+			prevLiInput.prop("checked", true);
 			prevLiInput.removeClass("soso");
 		}else if( checkedNum>0 && checkedNum<allNum ){
-			prevLiInput.prop("checked",true);
+			prevLiInput.prop("checked", true);
 			prevLiInput.addClass("soso");
 		}else{
-			prevLiInput.prop("checked",false);
+			prevLiInput.prop("checked", false);
 			prevLiInput.removeClass("soso");
 		}
 		
@@ -132,11 +132,3 @@
   	
     
 })(jQuery);
-
-
-$(function () {
-	
-    //函数调用
-    $(".tree").treemenu({ delay: 300 }).openActive();
-
-})
